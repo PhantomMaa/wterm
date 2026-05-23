@@ -1,0 +1,34 @@
+{
+  "name": "docker",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "prebuild": "mkdir -p public && cp node_modules/@wterm/core/wasm/wterm.wasm public/wterm.wasm && cp node_modules/@wterm/ghostty/wasm/ghostty-vt.wasm public/ghostty-vt.wasm",
+    "build": "next build",
+    "build:server": "tsc -p tsconfig.server.json",
+    "start": "NODE_ENV=production node dist/server.js",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.2.2",
+    "@wterm/core": "workspace:*",
+    "@wterm/dom": "workspace:*",
+    "@wterm/ghostty": "workspace:*",
+    "@wterm/react": "workspace:*",
+    "lucide-react": "^1.8.0",
+    "next": "16.2.3",
+    "node-pty": "^1.0.0",
+    "postcss": "^8.5.9",
+    "react": "19.2.5",
+    "react-dom": "19.2.5",
+    "tailwindcss": "^4.2.2",
+    "ws": "^8.18.2"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@types/ws": "^8.18.1",
+    "typescript": "^6.0.2"
+  }
+}

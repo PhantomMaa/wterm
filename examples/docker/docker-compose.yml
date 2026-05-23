@@ -1,0 +1,14 @@
+services:
+  wterm-docker:
+    build:
+      context: ../..
+      dockerfile: examples/docker/Dockerfile
+    container_name: wterm-docker
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./workspace:/workspace
+    environment:
+      - WORKSPACE_DIR=/workspace
+      - SHELL=/bin/bash
+    restart: unless-stopped
