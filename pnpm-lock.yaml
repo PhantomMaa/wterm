@@ -144,9 +144,6 @@ importers:
       '@wterm/dom':
         specifier: workspace:*
         version: link:../../packages/@wterm/dom
-      '@wterm/ghostty':
-        specifier: workspace:*
-        version: link:../../packages/@wterm/ghostty
       '@wterm/react':
         specifier: workspace:*
         version: link:../../packages/@wterm/react
@@ -187,6 +184,9 @@ importers:
       '@types/ws':
         specifier: ^8.18.1
         version: 8.18.1
+      tsx:
+        specifier: ^4.19.4
+        version: 4.21.0
       typescript:
         specifier: ^6.0.2
         version: 6.0.2

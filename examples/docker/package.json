@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "prebuild": "mkdir -p public && cp node_modules/@wterm/core/wasm/wterm.wasm public/wterm.wasm && cp node_modules/@wterm/ghostty/wasm/ghostty-vt.wasm public/ghostty-vt.wasm",
+    "predev": "mkdir -p public && cp node_modules/@wterm/core/wasm/wterm.wasm public/wterm.wasm",
+    "dev": "WORKSPACE_DIR=./workspace PORT=3000 tsx server.ts",
+    "prebuild": "mkdir -p public && cp node_modules/@wterm/core/wasm/wterm.wasm public/wterm.wasm",
     "build": "next build",
     "build:server": "tsc -p tsconfig.server.json",
     "start": "NODE_ENV=production node dist/server.js",
@@ -13,7 +15,6 @@
     "@tailwindcss/postcss": "^4.2.2",
     "@wterm/core": "workspace:*",
     "@wterm/dom": "workspace:*",
-    "@wterm/ghostty": "workspace:*",
     "@wterm/react": "workspace:*",
     "lucide-react": "^1.8.0",
     "next": "16.2.3",
@@ -29,6 +30,7 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@types/ws": "^8.18.1",
+    "tsx": "^4.19.4",
     "typescript": "^6.0.2"
   }
 }

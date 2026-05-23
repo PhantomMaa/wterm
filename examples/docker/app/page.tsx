@@ -3,7 +3,6 @@
 import { useCallback, useRef, useState } from "react";
 import { Terminal, useTerminal } from "@wterm/react";
 import type { WTerm } from "@wterm/dom";
-import { CoreToggle } from "./core-toggle";
 import "@wterm/react/css";
 
 export default function LocalTerminal() {
@@ -52,7 +51,6 @@ export default function LocalTerminal() {
 
   return (
     <div className="flex h-screen flex-col">
-      <CoreToggle />
       <Terminal
         ref={ref}
         cols={80}
